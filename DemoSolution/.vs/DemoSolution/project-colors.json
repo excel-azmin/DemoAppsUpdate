@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "f5e904d8-beb2-4ccb-8639-ac9f2e1b2b53": {
+      "ProjectGuid": "f5e904d8-beb2-4ccb-8639-ac9f2e1b2b53",
+      "DisplayName": "APIProject",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "2eb76052-8a39-46c3-ac99-4cc899c10b16": {
+      "ProjectGuid": "2eb76052-8a39-46c3-ac99-4cc899c10b16",
+      "DisplayName": "WebApplication",
+      "ColorIndex": 1
+    },
+    "e5d22d12-d902-417b-a23b-f2549c12d112": {
+      "ProjectGuid": "e5d22d12-d902-417b-a23b-f2549c12d112",
+      "DisplayName": "WebApp",
+      "ColorIndex": 2
+    },
+    "ff3a50c5-b60e-4a55-a1ae-5c23092403e3": {
+      "ProjectGuid": "ff3a50c5-b60e-4a55-a1ae-5c23092403e3",
+      "DisplayName": "WebApp",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}
