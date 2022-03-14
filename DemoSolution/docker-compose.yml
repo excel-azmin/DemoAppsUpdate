@@ -1,15 +1,6 @@
 version: '3.4'
 
 services:
-  apiproject:
-    image: ${DOCKER_REGISTRY-}apiproject
-    build:
-      context: .
-      dockerfile: APIProject/Dockerfile
-    ports:
-       - 8050:80
-    depends_on:
-       - sqlserver
   sqlserver:
     image: mcr.microsoft.com/mssql/server:2019-latest
     environment:
@@ -17,3 +8,20 @@ services:
       - ACCEPT_EULA=Y
     ports:
       - "1439:1433"
+  apiproject:
+    image: ${DOCKER_REGISTRY-}apiproject
+    build:
+      context: .
+      dockerfile: APIProject/Dockerfile
+    ports:
+       - 8050:80
+    #depends_on:
+    #   - sqlserver
+  
+  webapp:
+    image: ${DOCKER_REGISTRY-}webapp
+    build:
+      context: .
+      dockerfile: WebApp/Dockerfile
+    ports:
+       - 8051:80

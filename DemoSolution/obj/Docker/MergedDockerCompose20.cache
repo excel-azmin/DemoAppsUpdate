@@ -1,0 +1,35 @@
+services:
+  apiproject:
+    build:
+      context: C:\Users\AZMIN\Desktop\test6\DemoSolution\DemoSolution
+      dockerfile: APIProject/Dockerfile
+    depends_on:
+      sqlserver:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: apiproject
+    ports:
+    - published: 8050
+      target: 80
+    - target: 80
+  sqlserver:
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: Excel@2022
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    ports:
+    - published: 1439
+      target: 1433
+  webapp:
+    build:
+      context: C:\Users\AZMIN\Desktop\test6\DemoSolution\DemoSolution
+      dockerfile: WebApp/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: webapp
+    ports:
+    - published: 8050
+      target: 80
+    - target: 80
+version: '3.4'
