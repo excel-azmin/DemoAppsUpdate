@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+  apiproject:
+    image: ${DOCKER_REGISTRY-}apiproject
+    build:
+      context: .
+      dockerfile: APIProject/Dockerfile
+    ports:
+       - 8050:80
+    depends_on:
+       - sqlserver
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      - SA_PASSWORD=Excel@2022
+      - ACCEPT_EULA=Y
+    ports:
+      - "1439:1433"
